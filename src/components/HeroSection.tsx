@@ -7,7 +7,8 @@ const HeroSection = () => {
     <section className="min-h-screen pt-20 bg-background relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-12 gap-0 min-h-[calc(100vh-5rem)] items-center">
-          {/* Left: Image */}
+          
+          {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
@@ -16,24 +17,23 @@ const HeroSection = () => {
           >
             <img
               src={heroImage}
-              alt="Luxury salon interior"
+              alt="Luxury salon in Philadelphia"
               className="w-full h-full object-cover"
             />
-            {/* Overlay gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent" />
           </motion.div>
 
-          {/* Right: Content */}
+          {/* Content */}
           <div className="lg:col-span-7 lg:pl-16 py-12 lg:py-0 flex flex-col justify-center">
-            <motion.div
+            
+            <motion.span
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
+              className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-6 block"
             >
-              <span className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-6 block">
-                Redefining Beauty Since 2024
-              </span>
-            </motion.div>
+              Philadelphia • Luxury Beauty Experience
+            </motion.span>
 
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
@@ -45,7 +45,7 @@ const HeroSection = () => {
               <br />
               <span className="italic text-gold">Artistry</span>
               <br />
-              Meets You
+              Meets Confidence
             </motion.h1>
 
             <motion.p
@@ -54,11 +54,11 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="font-body text-muted-foreground text-base leading-relaxed max-w-md mb-10"
             >
-              Experience bespoke beauty services crafted for the modern individual.
-              Every visit is a journey, every detail considered.
+              Premium hair, color, and beauty services in Philadelphia.
+              Every appointment is designed to elevate your look and your confidence.
             </motion.p>
 
-            {/* Quick Action Card */}
+            {/* Booking Card */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -77,7 +77,9 @@ const HeroSection = () => {
                   <Calendar size={14} className="text-gold" />
                   <span className="font-body">Next Available</span>
                 </div>
-                <span className="font-display text-lg text-foreground">Today, 2:30 PM</span>
+                <span className="font-display text-lg text-foreground">
+                  Today, 2:30 PM
+                </span>
               </div>
 
               <div className="flex items-center gap-4 mb-6">
@@ -85,14 +87,16 @@ const HeroSection = () => {
                   <Clock size={14} className="text-gold" />
                   <span className="font-body">Wait Time</span>
                 </div>
-                <span className="font-display text-lg text-foreground">~15 min</span>
+                <span className="font-display text-lg text-foreground">
+                  ~15 min
+                </span>
               </div>
 
               <a
                 href="#booking"
                 className="group flex items-center justify-center gap-2 w-full py-3 bg-gold text-accent-foreground font-body text-xs tracking-widest uppercase hover:bg-gold-light transition-colors duration-300"
               >
-                Reserve Your Spot
+                Book Appointment
                 <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
               </a>
             </motion.div>
@@ -100,12 +104,21 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scrolling Ticker */}
+      {/* Ticker */}
       <div className="absolute bottom-0 left-0 right-0 border-t border-border bg-card/50 backdrop-blur-sm py-3 overflow-hidden">
         <div className="animate-ticker whitespace-nowrap flex gap-12">
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex gap-12 items-center">
-              {["Hair Artistry", "Skincare Rituals", "Nail Couture", "Bridal Packages", "Color Correction", "Scalp Therapy", "Lash Extensions", "Makeup Design"].map((item) => (
+              {[
+                "Hair Artistry",
+                "Color Specialists",
+                "Silk Press",
+                "Lace Front Installs",
+                "Scalp Therapy",
+                "Lash Extensions",
+                "Makeup",
+                "Bridal Styling",
+              ].map((item) => (
                 <span key={item + i} className="font-display text-sm italic tracking-wide text-muted-foreground">
                   {item} <span className="text-gold mx-4">✦</span>
                 </span>

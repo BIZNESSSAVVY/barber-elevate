@@ -1,7 +1,6 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { motion, useInView } from "framer-motion";
+import { useRef, useState } from "react";
+import { ArrowUpRight, X } from "lucide-react";
 import serviceHair from "@/assets/service-hair.jpg";
 import serviceSkin from "@/assets/service-skin.jpg";
 import serviceNails from "@/assets/service-nails.jpg";
@@ -10,112 +9,119 @@ const services = [
   {
     title: "Hair Artistry",
     subtitle: "Cut · Color · Style",
-    description: "Precision cuts and bespoke color from master stylists who understand your vision.",
+    description: "Precision cuts and custom color tailored to your look.",
     image: serviceHair,
     price: "From $85",
-    featured: true,
   },
   {
-    title: "Skin Rituals",
-    subtitle: "Facials · Peels · Therapy",
-    description: "Clinical-grade treatments meets holistic wellness for radiant, healthy skin.",
+    title: "Skin Treatments",
+    subtitle: "Facials · Glow · Therapy",
+    description: "Advanced skincare treatments for radiant, healthy skin.",
     image: serviceSkin,
     price: "From $120",
-    featured: false,
   },
   {
-    title: "Nail Couture",
-    subtitle: "Manicure · Pedicure · Art",
-    description: "Meticulous nail artistry using premium, non-toxic formulations.",
+    title: "Nail Services",
+    subtitle: "Manicure · Pedicure · Design",
+    description: "Clean, detailed nail care with premium products.",
     image: serviceNails,
     price: "From $55",
-    featured: false,
   },
 ];
 
-const ServiceCard = ({ service, index }: { service: typeof services[0]; index: number }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.8, delay: index * 0.15, ease: [0.22, 1, 0.36, 1] }}
-      className={`group relative overflow-hidden cursor-pointer ${
-        service.featured ? "md:row-span-2" : ""
-      }`}
-    >
-      <div className={`relative overflow-hidden ${service.featured ? "h-full min-h-[500px]" : "h-[320px]"}`}>
-        <img
-          src={service.image}
-          alt={service.title}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-        />
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
-
-        {/* Content */}
-        <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-          <span className="font-body text-[10px] tracking-[0.3em] uppercase text-gold-light mb-2 block">
-            {service.subtitle}
-          </span>
-          <h3 className="font-display text-3xl md:text-4xl text-primary-foreground mb-2">
-            {service.title}
-          </h3>
-          <p className="font-body text-sm text-primary-foreground/70 max-w-xs mb-4 leading-relaxed">
-            {service.description}
-          </p>
-          <div className="flex items-center justify-between">
-            <span className="font-display text-lg text-gold">{service.price}</span>
-            <div className="w-10 h-10 border border-primary-foreground/30 flex items-center justify-center group-hover:bg-gold group-hover:border-gold transition-all duration-300">
-              <ArrowUpRight size={16} className="text-primary-foreground group-hover:text-accent-foreground transition-colors" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </motion.div>
-  );
-};
-
 const ServicesSection = () => {
-  const headerRef = useRef(null);
-  const isHeaderInView = useInView(headerRef, { once: true, margin: "-100px" });
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const [activeService, setActiveService] = useState<any>(null);
 
   return (
     <section id="services" className="py-24 md:py-32 bg-background">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+
         {/* Header */}
         <motion.div
-          ref={headerRef}
+          ref={ref}
           initial={{ opacity: 0, y: 30 }}
-          animate={isHeaderInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6"
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          className="mb-16"
         >
-          <div>
-            <span className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-4 block">
-              Our Craft
-            </span>
-            <h2 className="font-display text-4xl md:text-6xl font-light text-foreground leading-tight">
-              Services Designed
-              <br />
-              <span className="italic">for You</span>
-            </h2>
-          </div>
-          <p className="font-body text-sm text-muted-foreground max-w-sm leading-relaxed">
-            Each service is tailored to your unique needs, using only
-            the finest products and techniques in the industry.
-          </p>
+          <span className="text-xs tracking-[0.3em] uppercase text-gold mb-4 block">
+            Services
+          </span>
+          <h2 className="text-4xl md:text-6xl font-light mb-4">
+            Designed For You
+          </h2>
         </motion.div>
 
-        {/* Bento Grid */}
-        <div className="grid md:grid-cols-2 gap-4">
-          {services.map((service, index) => (
-            <ServiceCard key={service.title} service={service} index={index} />
+        {/* Grid */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {services.map((service) => (
+            <div
+              key={service.title}
+              onClick={() => setActiveService(service)}
+              className="cursor-pointer group"
+            >
+              <div className="relative h-[320px] overflow-hidden">
+                <img
+                  src={service.image}
+                  className="w-full h-full object-cover group-hover:scale-105 transition"
+                />
+                <div className="absolute inset-0 bg-black/40" />
+
+                <div className="absolute bottom-0 p-6 text-white">
+                  <h3 className="text-2xl mb-1">{service.title}</h3>
+                  <p className="text-sm opacity-80">{service.price}</p>
+                </div>
+
+                <div className="absolute top-4 right-4">
+                  <ArrowUpRight />
+                </div>
+              </div>
+            </div>
           ))}
         </div>
+
+        {/* MODAL */}
+        {activeService && (
+          <div
+            className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-6"
+            onClick={() => setActiveService(null)}
+          >
+            <div
+              className="bg-white max-w-lg w-full p-8 relative"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setActiveService(null)}
+                className="absolute top-4 right-4"
+              >
+                <X />
+              </button>
+
+              <img
+                src={activeService.image}
+                className="w-full h-[200px] object-cover mb-6"
+              />
+
+              <h3 className="text-2xl mb-2">{activeService.title}</h3>
+              <p className="text-sm text-gray-600 mb-4">
+                {activeService.description}
+              </p>
+
+              <div className="text-lg font-semibold mb-6">
+                {activeService.price}
+              </div>
+
+              <a
+                href="#booking"
+                className="block text-center bg-black text-white py-3"
+              >
+                Book This Service
+              </a>
+            </div>
+          </div>
+        )}
+
       </div>
     </section>
   );
