@@ -4,6 +4,7 @@ import ServicesSection from "@/components/ServicesSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import BookingSection from "@/components/BookingSection";
 import AboutSection from "@/components/AboutSection";
+import GallerySection from "@/components/GallerySection"; // ✅ ADD THIS
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactFooter from "@/components/ContactFooter";
 
@@ -16,6 +17,10 @@ const Index = () => {
       <FeaturesSection />
       <BookingSection />
       <AboutSection />
+
+      {/* ✅ GALLERY GOES HERE */}
+      <GallerySection />
+
       <TestimonialsSection />
       <ContactFooter />
     </div>
