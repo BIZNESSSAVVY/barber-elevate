@@ -3,36 +3,36 @@ import { useRef } from "react";
 
 const images = [
   {
-    src: "https://source.unsplash.com/600x800/?black,woman,hairstyle,salon",
-    alt: "Silk press on natural hair",
+    src: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=800&q=80",
+    alt: "Natural curls on Black woman",
   },
   {
-    src: "https://source.unsplash.com/600x800/?african,american,woman,hair,beauty",
-    alt: "Defined curls and hydration treatment",
+    src: "https://images.unsplash.com/photo-1605497787865-5f2fbe3a9c4e?auto=format&fit=crop&w=800&q=80",
+    alt: "Blonde balayage on White woman",
   },
   {
-    src: "https://source.unsplash.com/600x800/?latina,woman,hair,beauty,salon",
-    alt: "Soft waves and volume styling",
+    src: "https://images.unsplash.com/photo-1595475038784-bbe439ff41e6?auto=format&fit=crop&w=800&q=80",
+    alt: "Sleek lace front install",
   },
   {
-    src: "https://source.unsplash.com/600x800/?hispanic,woman,hairstyle,salon",
-    alt: "Color and gloss finish",
+    src: "https://images.unsplash.com/photo-1594824475317-ef78d8f8e1e4?auto=format&fit=crop&w=800&q=80",
+    alt: "Precision cut and volume styling",
   },
   {
-    src: "https://source.unsplash.com/600x800/?white,woman,blonde,hair,salon",
-    alt: "Blonde balayage styling",
+    src: "https://images.unsplash.com/photo-1603570419985-9f6b6c1e4c9a?auto=format&fit=crop&w=800&q=80",
+    alt: "Elegant straight styling",
   },
   {
-    src: "https://source.unsplash.com/600x800/?brunette,woman,hair,beauty",
-    alt: "Luxury blowout styling",
+    src: "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&w=800&q=80",
+    alt: "Bridal updo look",
   },
   {
-    src: "https://source.unsplash.com/600x800/?black,woman,silk,press,hair",
-    alt: "Sleek silk press finish",
+    src: "https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=800&q=80",
+    alt: "Hair color transformation",
   },
   {
-    src: "https://source.unsplash.com/600x800/?diverse,women,beauty,hair",
-    alt: "Modern salon styling",
+    src: "https://images.unsplash.com/photo-1598524374912-6b0b0e9d3c67?auto=format&fit=crop&w=800&q=80",
+    alt: "Soft waves and extensions",
   },
 ];
 const GallerySection = () => {
