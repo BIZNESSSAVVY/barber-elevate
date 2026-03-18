@@ -9,7 +9,7 @@ const HeroSection = () => {
     const el = document.getElementById("booking");
 
     if (el) {
-      const yOffset = -100; // adjust based on your header height
+      const yOffset = -100;
       const y =
         el.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
@@ -18,7 +18,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="min-h-screen pt-20 bg-background relative overflow-hidden">
+    <section className="min-h-screen pt-20 pb-28 bg-background relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-12 gap-0 min-h-[calc(100vh-5rem)] items-center">
 
@@ -77,7 +77,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="bg-card border border-border p-6 max-w-sm"
+              className="bg-card border border-border p-6 max-w-sm relative z-10"
             >
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
@@ -106,7 +106,6 @@ const HeroSection = () => {
                 </span>
               </div>
 
-              {/* ✅ FIXED BUTTON */}
               <button
                 onClick={handleScrollToBooking}
                 className="group flex items-center justify-center gap-2 w-full py-3 bg-gold text-accent-foreground font-body text-xs tracking-widest uppercase hover:bg-gold-light transition-colors duration-300"
