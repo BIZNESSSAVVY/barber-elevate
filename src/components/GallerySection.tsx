@@ -3,36 +3,36 @@ import { useRef } from "react";
 
 const images = [
   {
-    src: "https://images.unsplash.com/photo-1603570419985-9f6b6c1e4c9a?q=80&w=1200&auto=format&fit=crop",
-    alt: "Flawless silk press on natural hair",
+    src: "https://source.unsplash.com/600x800/?black,woman,hairstyle,salon",
+    alt: "Silk press on natural hair",
   },
   {
-    src: "https://images.unsplash.com/photo-1595475038784-bbe439ff41e6?q=80&w=1200&auto=format&fit=crop",
-    alt: "Lace front install with natural hairline",
+    src: "https://source.unsplash.com/600x800/?african,american,woman,hair,beauty",
+    alt: "Defined curls and hydration treatment",
   },
   {
-    src: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=1200&auto=format&fit=crop",
-    alt: "Defined natural curls and hydration treatment",
+    src: "https://source.unsplash.com/600x800/?latina,woman,hair,beauty,salon",
+    alt: "Soft waves and volume styling",
   },
   {
-    src: "https://images.unsplash.com/photo-1605497787865-5f2fbe3a9c4e?q=80&w=1200&auto=format&fit=crop",
-    alt: "Blonde balayage with soft waves",
+    src: "https://source.unsplash.com/600x800/?hispanic,woman,hairstyle,salon",
+    alt: "Color and gloss finish",
   },
   {
-    src: "https://images.unsplash.com/photo-1598524374912-6b0b0e9d3c67?q=80&w=1200&auto=format&fit=crop",
-    alt: "Luxury body wave extensions",
+    src: "https://source.unsplash.com/600x800/?white,woman,blonde,hair,salon",
+    alt: "Blonde balayage styling",
   },
   {
-    src: "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?q=80&w=1200&auto=format&fit=crop",
-    alt: "Elegant bridal updo styling",
+    src: "https://source.unsplash.com/600x800/?brunette,woman,hair,beauty",
+    alt: "Luxury blowout styling",
   },
   {
-    src: "https://images.unsplash.com/photo-1600948836101-f9ffda59d250?q=80&w=1200&auto=format&fit=crop",
-    alt: "Full color transformation and gloss finish",
+    src: "https://source.unsplash.com/600x800/?black,woman,silk,press,hair",
+    alt: "Sleek silk press finish",
   },
   {
-    src: "https://images.unsplash.com/photo-1594824475317-ef78d8f8e1e4?q=80&w=1200&auto=format&fit=crop",
-    alt: "Precision cut with volume styling",
+    src: "https://source.unsplash.com/600x800/?diverse,women,beauty,hair",
+    alt: "Modern salon styling",
   },
 ];
 const GallerySection = () => {
