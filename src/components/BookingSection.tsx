@@ -17,7 +17,7 @@ const BookingSection = () => {
     <section id="booking" className="py-24 md:py-32 bg-bone">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          
+
           {/* Left */}
           <motion.div
             ref={ref}
@@ -55,13 +55,13 @@ const BookingSection = () => {
             </div>
           </motion.div>
 
-          {/* Right: Setmore Embed */}
+          {/* Right: Booking Embed */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="bg-background border border-border p-6 md:p-8 min-h-[520px]">
+            <div className="bg-background border border-border p-6 md:p-8">
 
               <div className="flex items-center justify-between mb-6 pb-6 border-b border-border">
                 <div>
@@ -69,34 +69,26 @@ const BookingSection = () => {
                     Online Booking
                   </h3>
                   <p className="font-body text-xs text-muted-foreground mt-1">
-                    Powered by Setmore
+                    Instant scheduling
                   </p>
                 </div>
                 <Calendar size={18} className="text-gold" />
               </div>
 
-              {/* 🔥 DROP SETMORE CODE HERE */}
-              <div
-                id="setmore-booking-widget"
-                className="w-full min-h-[400px] flex items-center justify-center border-2 border-dashed border-border"
-              >
-                <div className="text-center px-6">
-                  <Calendar size={32} className="text-gold mx-auto mb-4" />
-                  <p className="text-sm text-muted-foreground">
-                    Setmore booking widget will load here
-                  </p>
-                </div>
+              {/* ✅ WORKING SETMORE IFRAME */}
+              <div className="w-full h-[500px] border border-border overflow-hidden">
+                <iframe
+                  src="https://maisonbelle.setmore.com"
+                  className="w-full h-full border-0"
+                  title="Booking"
+                />
               </div>
-
-              {/* Example:
-                  <script id="anywhere_book_now_script" type="text/javascript" src="https://assets.setmore.com/integration/book-now/live/v1/anywhere-book-now.js"></script><button style="background-color: #000; color: #fff; border: none; padding: 12px 18px; font-size: 14px; font-weight: 600; border-radius: 6px; cursor: pointer;" id="Anywhere_button_iframe" class="anywhere-book-now-button" data-booking-url="https://maisonbelle.setmore.com" data-new-tab="false">Book now</button> above
-              */}
 
               <div className="mt-6 pt-6 border-t border-border">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-green-500" />
                   <span className="text-xs text-muted-foreground">
-                    Real-time availability synced with calendar
+                    Real-time availability • Instant confirmation
                   </span>
                 </div>
               </div>
