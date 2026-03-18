@@ -3,11 +3,25 @@ import { Calendar, Clock, ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-salon.jpg";
 
 const HeroSection = () => {
+
+  const handleScrollToBooking = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const el = document.getElementById("booking");
+
+    if (el) {
+      const yOffset = -100; // adjust based on your header height
+      const y =
+        el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="min-h-screen pt-20 bg-background relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-12 gap-0 min-h-[calc(100vh-5rem)] items-center">
-          
+
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -25,7 +39,7 @@ const HeroSection = () => {
 
           {/* Content */}
           <div className="lg:col-span-7 lg:pl-16 py-12 lg:py-0 flex flex-col justify-center">
-            
+
             <motion.span
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -92,13 +106,14 @@ const HeroSection = () => {
                 </span>
               </div>
 
-              <a
-                href="#booking"
+              {/* ✅ FIXED BUTTON */}
+              <button
+                onClick={handleScrollToBooking}
                 className="group flex items-center justify-center gap-2 w-full py-3 bg-gold text-accent-foreground font-body text-xs tracking-widest uppercase hover:bg-gold-light transition-colors duration-300"
               >
                 Book Appointment
                 <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-              </a>
+              </button>
             </motion.div>
           </div>
         </div>
@@ -119,7 +134,10 @@ const HeroSection = () => {
                 "Makeup",
                 "Bridal Styling",
               ].map((item) => (
-                <span key={item + i} className="font-display text-sm italic tracking-wide text-muted-foreground">
+                <span
+                  key={item + i}
+                  className="font-display text-sm italic tracking-wide text-muted-foreground"
+                >
                   {item} <span className="text-gold mx-4">✦</span>
                 </span>
               ))}
