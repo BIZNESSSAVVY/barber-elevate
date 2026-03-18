@@ -89,7 +89,7 @@ const BookingSection = () => {
               </div>
 
               {/* Example:
-                  Paste Setmore script/embed here and REMOVE placeholder above
+                  <script id="anywhere_book_now_script" type="text/javascript" src="https://assets.setmore.com/integration/book-now/live/v1/anywhere-book-now.js"></script><button style="background-color: #000; color: #fff; border: none; padding: 12px 18px; font-size: 14px; font-weight: 600; border-radius: 6px; cursor: pointer;" id="Anywhere_button_iframe" class="anywhere-book-now-button" data-booking-url="https://maisonbelle.setmore.com" data-new-tab="false">Book now</button> above
               */}
 
               <div className="mt-6 pt-6 border-t border-border">
