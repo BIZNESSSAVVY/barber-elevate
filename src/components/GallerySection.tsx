@@ -82,7 +82,7 @@ const GallerySection = () => {
                 src={img.src}
                 alt={img.alt}
                 loading="lazy"
-                className="w-full h-[280px] md:h-[340px] object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-[280px] md:h-[340px] object-contain bg-black transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-80 group-hover:opacity-100 transition duration-500" />
               <div className="absolute bottom-4 left-4 right-4">
