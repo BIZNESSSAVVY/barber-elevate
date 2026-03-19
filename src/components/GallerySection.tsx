@@ -1,37 +1,47 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
+// Importing the assets directly so they load from src/assets
+import silkPress from "../assets/silk-press.png";
+import knotlessBraids from "../assets/knotless-braids.png";
+import microlinks from "../assets/microlinks-install.png";
+import taperedFade from "../assets/tapered-fade.png";
+import butterflyLocs from "../assets/butterfly-locs.png";
+import curlyWash from "../assets/curly-wash-n-go.png";
+import sleekPony from "../assets/sleek-ponytail.png";
+import tribalBraids from "../assets/tribal-braids.png";
+
 const images = [
   {
-    src: "/assets/silk-press.png",
+    src: silkPress,
     alt: "Signature Silk Press",
   },
   {
-    src: "/assets/knotless-braids.png",
+    src: knotlessBraids,
     alt: "Luxury Knotless Braids",
   },
   {
-    src: "/assets/microlinks-install.png",
+    src: microlinks,
     alt: "Seamless Microlinks",
   },
   {
-    src: "/assets/tapered-fade.png",
+    src: taperedFade,
     alt: "Precision Tapered Cut",
   },
   {
-    src: "/assets/butterfly-locs.png",
+    src: butterflyLocs,
     alt: "Distressed Butterfly Locs",
   },
   {
-    src: "/assets/curly-wash-n-go.png",
+    src: curlyWash,
     alt: "Defined Coily Wash & Go",
   },
   {
-    src: "/assets/sleek-ponytail.png",
+    src: sleekPony,
     alt: "Sleek Extended Pony",
   },
   {
-    src: "/assets/tribal-braids.png",
+    src: tribalBraids,
     alt: "Boho Tribal Designs",
   },
 ];
