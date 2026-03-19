@@ -1,25 +1,39 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-// Importing from assets folder as requested
-import img1 from "../assets/silk-press.png";
-import img2 from "../assets/knotless-braids.png";
-import img3 from "../assets/microlinks-install.jpg";
-import img4 from "../assets/tapered-fade.jpg";
-import img5 from "../assets/butterfly-locs.jpg";
-import img6 from "../assets/curly-wash-n-go.jpg";
-import img7 from "../assets/sleek-ponytail.jpg";
-import img8 from "../assets/tribal-braids.jpg";
-
 const images = [
-  { src: img1, alt: "Signature Silk Press" },
-  { src: img2, alt: "Luxury Knotless Braids" },
-  { src: img3, alt: "Seamless Microlinks" },
-  { src: img4, alt: "Precision Tapered Cut" },
-  { src: img5, alt: "Distressed Butterfly Locs" },
-  { src: img6, alt: "Defined Coily Wash & Go" },
-  { src: img7, alt: "Sleek Extended Pony" },
-  { src: img8, alt: "Boho Tribal Designs" },
+  {
+    src: "/assets/silk-press.png",
+    alt: "Signature Silk Press",
+  },
+  {
+    src: "/assets/knotless-braids.png",
+    alt: "Luxury Knotless Braids",
+  },
+  {
+    src: "/assets/microlinks-install.png",
+    alt: "Seamless Microlinks",
+  },
+  {
+    src: "/assets/tapered-fade.png",
+    alt: "Precision Tapered Cut",
+  },
+  {
+    src: "/assets/butterfly-locs.png",
+    alt: "Distressed Butterfly Locs",
+  },
+  {
+    src: "/assets/curly-wash-n-go.png",
+    alt: "Defined Coily Wash & Go",
+  },
+  {
+    src: "/assets/sleek-ponytail.png",
+    alt: "Sleek Extended Pony",
+  },
+  {
+    src: "/assets/tribal-braids.png",
+    alt: "Boho Tribal Designs",
+  },
 ];
 
 const GallerySection = () => {
@@ -29,7 +43,7 @@ const GallerySection = () => {
   return (
     <section id="gallery" className="py-24 md:py-32 bg-background">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-        
+
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 40 }}
@@ -41,7 +55,7 @@ const GallerySection = () => {
             The Philly Standard
           </span>
           <h2 className="font-display text-4xl md:text-6xl font-light text-foreground leading-tight">
-            Philly Style, <span className="italic">Unfiltered</span>
+            Artistry in <span className="italic">Every Texture</span>
           </h2>
         </motion.div>
 
@@ -60,15 +74,16 @@ const GallerySection = () => {
                 loading="lazy"
                 className="w-full h-[280px] md:h-[340px] object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-70 group-hover:opacity-100 transition duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-80 group-hover:opacity-100 transition duration-500" />
               <div className="absolute bottom-4 left-4 right-4">
-                <p className="text-white text-[10px] md:text-xs tracking-widest font-bold uppercase">
+                <p className="text-white text-xs tracking-wide font-medium opacity-90">
                   {img.alt}
                 </p>
               </div>
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );
