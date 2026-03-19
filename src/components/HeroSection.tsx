@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-salon.jpg";
+import heroImage from "@/assets/hero.png";
 
 const HeroSection = () => {
 
