@@ -3,7 +3,7 @@ import { useRef } from "react";
 
 // Importing from assets folder as requested
 import img1 from "../assets/silk-press.png";
-import img2 from "../assets/knotless-braids.jpg";
+import img2 from "../assets/knotless-braids.png";
 import img3 from "../assets/microlinks-install.jpg";
 import img4 from "../assets/tapered-fade.jpg";
 import img5 from "../assets/butterfly-locs.jpg";
