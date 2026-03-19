@@ -1,35 +1,35 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
+const featuredImage =
+  "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1800&q=80";
+
 const images = [
   {
     src: "https://images.unsplash.com/photo-1594824475317-ef78d8f8e1e4?auto=format&fit=crop&w=1200&q=80",
     alt: "Silk press on natural textured hair",
   },
   {
-    src: "https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=1200&q=80",
-    alt: "Luxury salon styling session",
+    src: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=1200&q=80",
+    alt: "Defined natural curls",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1595475038784-bbe439ff41e6?auto=format&fit=crop&w=1200&q=80",
+    alt: "Custom lace install",
   },
   {
     src: "https://images.unsplash.com/photo-1603570419985-9f6b6c1e4c9a?auto=format&fit=crop&w=1200&q=80",
     alt: "Sleek straight styling",
   },
   {
-    src: "https://images.unsplash.com/photo-1595475038784-bbe439ff41e6?auto=format&fit=crop&w=1200&q=80",
-    alt: "Custom wig install",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=1200&q=80",
-    alt: "Defined natural curls",
-  },
-  {
     src: "https://images.unsplash.com/photo-1598524374912-6b0b0e9d3c67?auto=format&fit=crop&w=1200&q=80",
-    alt: "Soft waves with extensions",
+    alt: "Soft waves and extensions",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=1200&q=80",
+    alt: "Luxury salon styling session",
   },
 ];
-
-const featured =
-  "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1600&q=80";
 
 const GallerySection = () => {
   const ref = useRef(null);
@@ -39,7 +39,7 @@ const GallerySection = () => {
     <section id="gallery" className="py-24 md:py-32 bg-background">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
 
-        {/* Header */}
+        {/* HEADER */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 40 }}
@@ -58,36 +58,36 @@ const GallerySection = () => {
           </h2>
 
           <p className="mt-6 text-muted-foreground text-sm">
-            From silk presses to installs, every look is tailored, precise, and designed to last.
+            Precision styling for textured hair, protective styles, and modern luxury looks.
           </p>
         </motion.div>
 
-        {/* Featured Image (HIGH CONVERSION) */}
+        {/* FEATURED IMAGE */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.97 }}
+          initial={{ opacity: 0, scale: 0.96 }}
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 1 }}
-          className="mb-8 relative overflow-hidden rounded-2xl"
+          className="mb-10 relative overflow-hidden rounded-2xl"
         >
           <img
-            src={featured}
+            src={featuredImage}
             alt="Luxury salon experience"
-            className="w-full h-[400px] md:h-[500px] object-cover"
+            className="w-full h-[420px] md:h-[520px] object-cover"
           />
 
-          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
           <div className="absolute bottom-8 left-8 text-white max-w-md">
-            <h3 className="text-2xl font-display mb-2">
+            <h3 className="text-2xl md:text-3xl font-display mb-2">
               Luxury Experience
             </h3>
             <p className="text-sm opacity-90">
-              Precision styling in a space designed for comfort, beauty, and confidence.
+              Elevated service. Expert technique. Results that last beyond the chair.
             </p>
           </div>
         </motion.div>
 
-        {/* Grid */}
+        {/* GRID */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {images.map((img, index) => (
             <motion.div
@@ -100,13 +100,14 @@ const GallerySection = () => {
               <img
                 src={img.src}
                 alt={img.alt}
+                loading="lazy"
                 className="w-full h-[240px] md:h-[300px] object-cover transition-transform duration-700 group-hover:scale-110"
               />
 
-              {/* Gradient Overlay */}
+              {/* OVERLAY */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-80 group-hover:opacity-100 transition duration-500" />
 
-              {/* Text */}
+              {/* TEXT */}
               <div className="absolute bottom-4 left-4 right-4">
                 <p className="text-white text-xs tracking-wide opacity-90">
                   {img.alt}
@@ -120,5 +121,6 @@ const GallerySection = () => {
     </section>
   );
 };
+
 
 export default GallerySection;
