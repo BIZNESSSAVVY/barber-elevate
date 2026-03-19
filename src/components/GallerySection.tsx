@@ -1,33 +1,38 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const featuredImage =
-  "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1800&q=80";
-
 const images = [
   {
-    src: "https://images.unsplash.com/photo-1594824475317-ef78d8f8e1e4?auto=format&fit=crop&w=1200&q=80",
-    alt: "Silk press on natural textured hair",
+    src: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80",
+    alt: "Waves & Laina",
   },
   {
-    src: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=1200&q=80",
-    alt: "Defined natural curls",
+    src: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80",
+    alt: "Blonde Balayage",
   },
   {
-    src: "https://images.unsplash.com/photo-1595475038784-bbe439ff41e6?auto=format&fit=crop&w=1200&q=80",
-    alt: "Custom lace install",
+    src: "https://images.unsplash.com/photo-1626954079673-f3c3b7f3b6b8?auto=format&fit=crop&w=800&q=80",
+    alt: "Sleek Lace Front Install",
   },
   {
-    src: "https://images.unsplash.com/photo-1603570419985-9f6b6c1e4c9a?auto=format&fit=crop&w=1200&q=80",
-    alt: "Sleek straight styling",
+    src: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=800&q=80",
+    alt: "Precision Cut and Styled",
   },
   {
-    src: "https://images.unsplash.com/photo-1598524374912-6b0b0e9d3c67?auto=format&fit=crop&w=1200&q=80",
-    alt: "Soft waves and extensions",
+    src: "https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?auto=format&fit=crop&w=800&q=80",
+    alt: "Blowout Straight Curls",
   },
   {
-    src: "https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=1200&q=80",
-    alt: "Luxury salon styling session",
+    src: "https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=800&q=80",
+    alt: "Elegant Bridal Updo",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=800&q=80",
+    alt: "Black Cherry Burgundy Color",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1596728325488-58c87691e9af?auto=format&fit=crop&w=800&q=80",
+    alt: "Soft Waves and Extensions",
   },
 ];
 
@@ -45,50 +50,19 @@ const GallerySection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="mb-20 max-w-2xl"
+          className="mb-20 text-center"
         >
           <span className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-4 block">
             Our Work
           </span>
 
           <h2 className="font-display text-4xl md:text-6xl font-light text-foreground leading-tight">
-            Real Results.
-            <br />
-            <span className="italic">Real Confidence.</span>
+            Hair That <span className="italic">Turns Heads</span>
           </h2>
-
-          <p className="mt-6 text-muted-foreground text-sm">
-            Precision styling for textured hair, protective styles, and modern luxury looks.
-          </p>
         </motion.div>
 
-        {/* FEATURED IMAGE */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : {}}
-          transition={{ duration: 1 }}
-          className="mb-10 relative overflow-hidden rounded-2xl"
-        >
-          <img
-            src={featuredImage}
-            alt="Luxury salon experience"
-            className="w-full h-[420px] md:h-[520px] object-cover"
-          />
-
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-
-          <div className="absolute bottom-8 left-8 text-white max-w-md">
-            <h3 className="text-2xl md:text-3xl font-display mb-2">
-              Luxury Experience
-            </h3>
-            <p className="text-sm opacity-90">
-              Elevated service. Expert technique. Results that last beyond the chair.
-            </p>
-          </div>
-        </motion.div>
-
-        {/* GRID */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        {/* 4-COLUMN GRID */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {images.map((img, index) => (
             <motion.div
               key={index}
@@ -101,7 +75,7 @@ const GallerySection = () => {
                 src={img.src}
                 alt={img.alt}
                 loading="lazy"
-                className="w-full h-[240px] md:h-[300px] object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-[280px] md:h-[340px] object-cover transition-transform duration-700 group-hover:scale-110"
               />
 
               {/* OVERLAY */}
@@ -109,7 +83,7 @@ const GallerySection = () => {
 
               {/* TEXT */}
               <div className="absolute bottom-4 left-4 right-4">
-                <p className="text-white text-xs tracking-wide opacity-90">
+                <p className="text-white text-xs tracking-wide font-medium opacity-90">
                   {img.alt}
                 </p>
               </div>
@@ -121,6 +95,5 @@ const GallerySection = () => {
     </section>
   );
 };
-
 
 export default GallerySection;
