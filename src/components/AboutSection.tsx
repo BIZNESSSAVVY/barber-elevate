@@ -71,12 +71,7 @@ const AboutSection = () => {
               />
             </div>
 
-            <div className="absolute -bottom-6 -left-6 bg-gold p-6 hidden lg:block">
-              <div className="font-display text-4xl text-accent-foreground">12</div>
-              <div className="font-body text-[10px] tracking-widest uppercase text-accent-foreground/80">
-                Years of Excellence
-              </div>
-            </div>
+          
           </motion.div>
 
         </div>
