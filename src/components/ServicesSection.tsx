@@ -1,31 +1,36 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ArrowUpRight, X } from "lucide-react";
-import serviceHair from "@/assets/service-hair.jpg";
-import serviceSkin from "@/assets/service-skin.jpg";
-import serviceNails from "@/assets/service-nails.jpg";
+
+// ✅ Barber images (must exist in /assets)
+import haircut from "../assets/haircut.png";
+import beard from "../assets/beard-grooming.png";
+import premium from "../assets/premium-service.png";
 
 const services = [
   {
-    title: "Hair Artistry",
-    subtitle: "Cut · Color · Style",
-    description: "Precision cuts and custom color tailored to your look.",
-    image: serviceHair,
-    price: "From $85",
+    title: "Precision Haircuts",
+    subtitle: "Fades · Tapers · Lineups",
+    description:
+      "Clean fades, sharp lineups, and modern cuts tailored to your style. Consistent, detailed, and always on point.",
+    image: haircut,
+    price: "From $40",
   },
   {
-    title: "Skin Treatments",
-    subtitle: "Facials · Glow · Therapy",
-    description: "Advanced skincare treatments for radiant, healthy skin.",
-    image: serviceSkin,
-    price: "From $120",
+    title: "Beard Grooming",
+    subtitle: "Shape · Line · Condition",
+    description:
+      "Expert beard shaping and lineups with hot towel treatment and premium products for a sharp, polished finish.",
+    image: beard,
+    price: "From $25",
   },
   {
-    title: "Nail Services",
-    subtitle: "Manicure · Pedicure · Design",
-    description: "Clean, detailed nail care with premium products.",
-    image: serviceNails,
-    price: "From $55",
+    title: "Full Service Experience",
+    subtitle: "Cut · Beard · Hot Towel",
+    description:
+      "Complete barbershop experience including haircut, beard grooming, and hot towel treatment. The full reset.",
+    image: premium,
+    price: "From $65",
   },
 ];
 
@@ -43,13 +48,14 @@ const ServicesSection = () => {
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
           className="mb-16"
         >
           <span className="text-xs tracking-[0.3em] uppercase text-gold mb-4 block">
             Services
           </span>
           <h2 className="text-4xl md:text-6xl font-light mb-4">
-            Designed For You
+            Built For Precision
           </h2>
         </motion.div>
 
@@ -64,7 +70,8 @@ const ServicesSection = () => {
               <div className="relative h-[320px] overflow-hidden">
                 <img
                   src={service.image}
-                  className="w-full h-full object-cover group-hover:scale-105 transition"
+                  alt={service.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                 />
                 <div className="absolute inset-0 bg-black/40" />
 
@@ -73,7 +80,7 @@ const ServicesSection = () => {
                   <p className="text-sm opacity-80">{service.price}</p>
                 </div>
 
-                <div className="absolute top-4 right-4">
+                <div className="absolute top-4 right-4 text-white">
                   <ArrowUpRight />
                 </div>
               </div>
@@ -100,6 +107,7 @@ const ServicesSection = () => {
 
               <img
                 src={activeService.image}
+                alt={activeService.title}
                 className="w-full h-[200px] object-cover mb-6"
               />
 
