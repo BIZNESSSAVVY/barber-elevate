@@ -39,7 +39,7 @@ const ContactFooter = () => {
 
             <div className="space-y-6">
               
-              <div className="flex items-center justify-between border-b border-primary-foreground/10 pb-6">
+              <a href="https://maps.app.goo.gl/YourActualGoogleMapsLinkHere" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between border-b border-primary-foreground/10 pb-6 group">
                 <div className="flex items-center gap-4">
                   <MapPin size={16} className="text-gold" />
                   <div>
@@ -49,32 +49,32 @@ const ContactFooter = () => {
                     </div>
                   </div>
                 </div>
-                <ArrowUpRight size={16} />
-              </div>
+                <ArrowUpRight size={16} className="text-primary-foreground/30 group-hover:text-gold transition-colors" />
+              </a>
 
-              <div className="flex items-center justify-between border-b border-primary-foreground/10 pb-6">
+              <a href="tel:2155550134" className="flex items-center justify-between border-b border-primary-foreground/10 pb-6 group">
                 <div className="flex items-center gap-4">
                   <Phone size={16} className="text-gold" />
                   <div className="text-sm">(215) 555-0134</div>
                 </div>
-                <ArrowUpRight size={16} />
-              </div>
+                <ArrowUpRight size={16} className="text-primary-foreground/30 group-hover:text-gold transition-colors" />
+              </a>
 
-              <div className="flex items-center justify-between border-b border-primary-foreground/10 pb-6">
+              <a href="mailto:book@broadstreetcuts.com" className="flex items-center justify-between border-b border-primary-foreground/10 pb-6 group">
                 <div className="flex items-center gap-4">
                   <Mail size={16} className="text-gold" />
                   <div className="text-sm">book@broadstreetcuts.com</div>
                 </div>
-                <ArrowUpRight size={16} />
-              </div>
+                <ArrowUpRight size={16} className="text-primary-foreground/30 group-hover:text-gold transition-colors" />
+              </a>
 
-              <div className="flex items-center justify-between pb-6">
+              <a href="https://www.instagram.com/broadstreetcuts/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between pb-6 group">
                 <div className="flex items-center gap-4">
                   <Instagram size={16} className="text-gold" />
                   <div className="text-sm">@broadstreetcuts</div>
                 </div>
-                <ArrowUpRight size={16} />
-              </div>
+                <ArrowUpRight size={16} className="text-primary-foreground/30 group-hover:text-gold transition-colors" />
+              </a>
 
             </div>
           </motion.div>
