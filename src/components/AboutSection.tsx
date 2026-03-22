@@ -7,11 +7,11 @@ const AboutSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-24 md:py-32 bg-background overflow-hidden">
+    <section id="about" className="py-24 md:py-32 bg-background">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
 
-          {/* Text */}
+          {/* Text Content */}
           <motion.div
             ref={ref}
             initial={{ opacity: 0, x: -50 }}
@@ -29,26 +29,29 @@ const AboutSection = () => {
               <span className="italic">Powered by Philly</span>
             </h2>
 
-            <div className="space-y-4 font-body text-muted-foreground text-sm leading-relaxed">
+            <div className="space-y-4 font-body text-muted-foreground text-sm leading-relaxed max-w-md">
               <p>
-                Broad Street Cuts was built for one thing—clean, consistent cuts done right.
+                Broad Street Cuts was built for one thing—clean, consistent cuts done right. 
                 No shortcuts. No rushed work. Just real barbers focused on detail every time you sit down.
               </p>
               <p>
-                From sharp lineups to flawless fades, our team brings years of experience
+                From sharp lineups to flawless fades, our team brings years of experience 
                 and a deep understanding of modern and classic styles. You walk in, we lock you in.
               </p>
             </div>
 
-            <div className="mt-10 grid grid-cols-3 gap-6 border-t border-border pt-8">
+            {/* Stats Grid */}
+            <div className="mt-10 grid grid-cols-3 gap-4 sm:gap-6 border-t border-border pt-8">
               {[
                 { value: "10+", label: "Years" },
                 { value: "5", label: "Barbers" },
                 { value: "200+", label: "5-Star Reviews" },
               ].map((stat) => (
-                <div key={stat.label}>
-                  <div className="font-display text-3xl text-foreground">{stat.value}</div>
-                  <div className="font-body text-[10px] tracking-widest uppercase text-muted-foreground mt-1">
+                <div key={stat.label} className="min-w-fit">
+                  <div className="font-display text-2xl md:text-3xl text-foreground whitespace-nowrap">
+                    {stat.value}
+                  </div>
+                  <div className="font-body text-[10px] tracking-widest uppercase text-muted-foreground mt-1 leading-tight">
                     {stat.label}
                   </div>
                 </div>
@@ -56,19 +59,21 @@ const AboutSection = () => {
             </div>
           </motion.div>
 
-          {/* Image */}
+          {/* Image Container */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.98 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 1, delay: 0.2 }}
-            className="lg:col-span-7 order-1 lg:order-2 relative"
+            className="lg:col-span-7 order-1 lg:order-2"
           >
-            <div className="overflow-hidden">
+            <div className="relative w-full rounded-sm overflow-hidden shadow-2xl">
               <img
                 src={aboutImage}
                 alt="Philadelphia barbershop interior"
-                className="w-full h-[400px] lg:h-[600px] object-cover"
+                className="w-full h-[450px] lg:h-[650px] object-cover object-center"
               />
+              {/* Subtle Overlay to match branding */}
+              <div className="absolute inset-0 bg-black/5 pointer-events-none" />
             </div>
           </motion.div>
 
