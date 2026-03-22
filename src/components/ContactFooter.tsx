@@ -37,43 +37,78 @@ const ContactFooter = () => {
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="flex flex-col gap-4">
               
-              <a href="https://maps.app.goo.gl/YourActualGoogleMapsLinkHere" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between border-b border-primary-foreground/10 pb-6 group">
-                <div className="flex items-center gap-4">
-                  <MapPin size={16} className="text-gold" />
+              {/* Address / Get Directions */}
+              <a 
+                href="https://www.google.com/maps/dir/?api=1&destination=1520+Walnut+Street+Philadelphia+PA+19102" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="group flex items-center justify-between p-6 rounded-lg border border-primary-foreground/5 bg-primary-foreground/[0.02] hover:bg-primary-foreground/[0.05] transition-all duration-300"
+              >
+                <div className="flex items-center gap-5">
+                  <div className="p-3 rounded-full bg-gold/10 text-gold group-hover:bg-gold group-hover:text-black transition-colors">
+                    <MapPin size={20} />
+                  </div>
                   <div>
-                    <div className="text-sm">1520 Walnut Street</div>
-                    <div className="text-xs text-primary-foreground/50">
-                      Philadelphia, PA 19102
-                    </div>
+                    <div className="text-xs uppercase tracking-widest text-gold mb-1 font-medium">Get Directions</div>
+                    <div className="text-sm font-light">1520 Walnut St, Philadelphia, PA 19102</div>
                   </div>
                 </div>
-                <ArrowUpRight size={16} className="text-primary-foreground/30 group-hover:text-gold transition-colors" />
+                <ArrowUpRight size={18} className="text-primary-foreground/20 group-hover:text-gold group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
               </a>
 
-              <a href="tel:2155550134" className="flex items-center justify-between border-b border-primary-foreground/10 pb-6 group">
-                <div className="flex items-center gap-4">
-                  <Phone size={16} className="text-gold" />
-                  <div className="text-sm">(215) 555-0134</div>
+              {/* Phone / Call Now */}
+              <a 
+                href="tel:2155550134" 
+                className="group flex items-center justify-between p-6 rounded-lg border border-primary-foreground/5 bg-primary-foreground/[0.02] hover:bg-primary-foreground/[0.05] transition-all duration-300"
+              >
+                <div className="flex items-center gap-5">
+                  <div className="p-3 rounded-full bg-gold/10 text-gold group-hover:bg-gold group-hover:text-black transition-colors">
+                    <Phone size={20} />
+                  </div>
+                  <div>
+                    <div className="text-xs uppercase tracking-widest text-gold mb-1 font-medium">Call Now</div>
+                    <div className="text-sm font-light">(215) 555-0134</div>
+                  </div>
                 </div>
-                <ArrowUpRight size={16} className="text-primary-foreground/30 group-hover:text-gold transition-colors" />
+                <ArrowUpRight size={18} className="text-primary-foreground/20 group-hover:text-gold transition-all" />
               </a>
 
-              <a href="mailto:book@broadstreetcuts.com" className="flex items-center justify-between border-b border-primary-foreground/10 pb-6 group">
-                <div className="flex items-center gap-4">
-                  <Mail size={16} className="text-gold" />
-                  <div className="text-sm">book@broadstreetcuts.com</div>
+              {/* Email */}
+              <a 
+                href="mailto:book@broadstreetcuts.com" 
+                className="group flex items-center justify-between p-6 rounded-lg border border-primary-foreground/5 bg-primary-foreground/[0.02] hover:bg-primary-foreground/[0.05] transition-all duration-300"
+              >
+                <div className="flex items-center gap-5">
+                  <div className="p-3 rounded-full bg-gold/10 text-gold group-hover:bg-gold group-hover:text-black transition-colors">
+                    <Mail size={20} />
+                  </div>
+                  <div>
+                    <div className="text-xs uppercase tracking-widest text-gold mb-1 font-medium">Email Us</div>
+                    <div className="text-sm font-light">book@broadstreetcuts.com</div>
+                  </div>
                 </div>
-                <ArrowUpRight size={16} className="text-primary-foreground/30 group-hover:text-gold transition-colors" />
+                <ArrowUpRight size={18} className="text-primary-foreground/20 group-hover:text-gold transition-all" />
               </a>
 
-              <a href="https://www.instagram.com/broadstreetcuts/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between pb-6 group">
-                <div className="flex items-center gap-4">
-                  <Instagram size={16} className="text-gold" />
-                  <div className="text-sm">@broadstreetcuts</div>
+              {/* Instagram */}
+              <a 
+                href="https://www.instagram.com/broadstreetcuts/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="group flex items-center justify-between p-6 rounded-lg border border-primary-foreground/5 bg-primary-foreground/[0.02] hover:bg-primary-foreground/[0.05] transition-all duration-300"
+              >
+                <div className="flex items-center gap-5">
+                  <div className="p-3 rounded-full bg-gold/10 text-gold group-hover:bg-gold group-hover:text-black transition-colors">
+                    <Instagram size={20} />
+                  </div>
+                  <div>
+                    <div className="text-xs uppercase tracking-widest text-gold mb-1 font-medium">Follow Us</div>
+                    <div className="text-sm font-light">@broadstreetcuts</div>
+                  </div>
                 </div>
-                <ArrowUpRight size={16} className="text-primary-foreground/30 group-hover:text-gold transition-colors" />
+                <ArrowUpRight size={18} className="text-primary-foreground/20 group-hover:text-gold transition-all" />
               </a>
 
             </div>
@@ -83,10 +118,10 @@ const ContactFooter = () => {
 
       {/* Bottom */}
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-8 flex justify-between items-center">
-        <div className="text-xl font-display">
+        <div className="text-xl font-display uppercase tracking-tighter">
           BROAD<span className="text-gold italic ml-1">Street Cuts</span>
         </div>
-        <div className="text-xs text-primary-foreground/40">
+        <div className="text-xs text-primary-foreground/40 font-body">
           © 2026 Broad Street Cuts. All rights reserved.
         </div>
       </div>
