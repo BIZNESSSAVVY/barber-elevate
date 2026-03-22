@@ -4,24 +4,24 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Alexandra Chen",
-    role: "Loyal Client · 3 Years",
+    name: "Marcus Johnson",
+    role: "Regular Client · 2 Years",
     quote:
-      "The online booking changed everything for me. I book my next appointment before I even leave the chair. The rebooking reminders are genius.",
+      "Every time I come here, the fade is flawless. No pushback, no rushed work. These guys really take their time and it shows.",
     rating: 5,
   },
   {
-    name: "Victoria Okafor",
-    role: "Bridal Client",
+    name: "Darnell Carter",
+    role: "Weekly Client",
     quote:
-      "From the stylist match quiz to the final look, every step felt curated just for me. My wedding party looked absolutely flawless.",
+      "I don’t wait anymore. I book my slot, walk in, sit down, and I’m out clean every time. Best system I’ve seen in a barbershop.",
     rating: 5,
   },
   {
-    name: "Sophie Laurent",
-    role: "Regular Client · 5 Years",
+    name: "Jamal Thompson",
+    role: "New Client",
     quote:
-      "I've followed my stylist here from another salon. The difference? Everything runs like clockwork. No waiting, no confusion, just exceptional service.",
+      "First visit and they got me right. Lineup was sharp, beard was perfect. Definitely found my new shop on Broad Street.",
     rating: 5,
   },
 ];
@@ -41,12 +41,12 @@ const TestimonialsSection = () => {
           className="mb-16"
         >
           <span className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-4 block">
-            Client Stories
+            Client Reviews
           </span>
           <h2 className="font-display text-4xl md:text-6xl font-light text-foreground leading-tight">
-            Words That
+            Real Cuts.
             <br />
-            <span className="italic">Matter</span>
+            <span className="italic">Real Feedback</span>
           </h2>
         </motion.div>
 

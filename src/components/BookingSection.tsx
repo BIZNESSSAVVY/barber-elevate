@@ -3,10 +3,10 @@ import { useRef } from "react";
 import { Calendar, Clock, Users, Star } from "lucide-react";
 
 const stats = [
-  { icon: Users, value: "12,000+", label: "Happy Clients" },
-  { icon: Star, value: "4.9", label: "Average Rating" },
-  { icon: Calendar, value: "50k+", label: "Appointments" },
-  { icon: Clock, value: "15 min", label: "Avg. Wait Time" },
+  { icon: Users, value: "8,000+", label: "Clients Served" },
+  { icon: Star, value: "4.9", label: "Google Rating" },
+  { icon: Calendar, value: "30k+", label: "Cuts Completed" },
+  { icon: Clock, value: "10 min", label: "Avg. Wait Time" },
 ];
 
 const BookingSection = () => {
@@ -26,18 +26,18 @@ const BookingSection = () => {
             transition={{ duration: 0.8 }}
           >
             <span className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-4 block">
-              Easy Booking
+              Book Your Cut
             </span>
 
             <h2 className="font-display text-4xl md:text-6xl font-light text-foreground leading-tight mb-6">
-              Book Your
+              Lock In Your
               <br />
-              <span className="italic">Appointment</span>
+              <span className="italic">Next Cut</span>
             </h2>
 
             <p className="font-body text-muted-foreground text-base leading-relaxed max-w-md mb-12">
-              Schedule your next visit in seconds. Choose your service, pick your stylist,
-              and lock in your time instantly.
+              Skip the wait. Pick your barber, choose your service, and secure your time in seconds.
+              In and out with a clean cut—no hassle.
             </p>
 
             <div className="grid grid-cols-2 gap-6">
@@ -66,16 +66,16 @@ const BookingSection = () => {
               <div className="flex items-center justify-between mb-6 pb-6 border-b border-border">
                 <div>
                   <h3 className="font-display text-xl text-foreground">
-                    Online Booking
+                    Book Online
                   </h3>
                   <p className="font-body text-xs text-muted-foreground mt-1">
-                    Instant scheduling
+                    Fast. Simple. Guaranteed slot.
                   </p>
                 </div>
                 <Calendar size={18} className="text-gold" />
               </div>
 
-              {/* ✅ WORKING SETMORE IFRAME */}
+              {/* ✅ SETMORE IFRAME (UPDATE LATER IF NEEDED) */}
               <div className="w-full h-[500px] border border-border overflow-hidden">
                 <iframe
                   src="https://maisonbelle.setmore.com"

@@ -16,9 +16,10 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
+          
           {/* Logo */}
           <a href="#" className="font-display text-2xl tracking-wide text-foreground">
-            MAISON<span className="text-gold italic ml-1">Belle</span>
+            BROAD<span className="text-gold italic ml-1">Street Cuts</span>
           </a>
 
           {/* Desktop Nav */}
@@ -39,7 +40,7 @@ const Navbar = () => {
             href="#booking"
             className="hidden md:inline-flex px-6 py-2.5 bg-gold text-accent-foreground font-body text-xs tracking-widest uppercase hover:bg-gold-light transition-colors duration-300"
           >
-            Book Now
+            Book Your Cut
           </a>
 
           {/* Mobile Toggle */}
@@ -77,7 +78,7 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
                 className="inline-flex justify-center px-6 py-3 bg-gold text-accent-foreground font-body text-xs tracking-widest uppercase"
               >
-                Book Now
+                Book Your Cut
               </a>
             </div>
           </motion.div>

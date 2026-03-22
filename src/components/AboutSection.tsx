@@ -20,31 +20,31 @@ const AboutSection = () => {
             className="lg:col-span-5 order-2 lg:order-1"
           >
             <span className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-4 block">
-              Our Story
+              Our Shop
             </span>
 
             <h2 className="font-display text-4xl md:text-5xl font-light text-foreground leading-tight mb-6">
-              Philadelphia Style,
+              Built on Precision,
               <br />
-              <span className="italic">Refined</span>
+              <span className="italic">Powered by Philly</span>
             </h2>
 
             <div className="space-y-4 font-body text-muted-foreground text-sm leading-relaxed">
               <p>
-                Maison Belle was created to bring elevated beauty services to Philadelphia.
-                We focus on precision, personalization, and results that last beyond the chair.
+                Broad Street Cuts was built for one thing—clean, consistent cuts done right.
+                No shortcuts. No rushed work. Just real barbers focused on detail every time you sit down.
               </p>
               <p>
-                Our stylists combine modern techniques with years of hands-on experience,
-                delivering looks tailored to your lifestyle, texture, and vision.
+                From sharp lineups to flawless fades, our team brings years of experience
+                and a deep understanding of modern and classic styles. You walk in, we lock you in.
               </p>
             </div>
 
             <div className="mt-10 grid grid-cols-3 gap-6 border-t border-border pt-8">
               {[
-                { value: "12+", label: "Years" },
-                { value: "6", label: "Stylists" },
-                { value: "150+", label: "5-Star Reviews" },
+                { value: "10+", label: "Years" },
+                { value: "5", label: "Barbers" },
+                { value: "200+", label: "5-Star Reviews" },
               ].map((stat) => (
                 <div key={stat.label}>
                   <div className="font-display text-3xl text-foreground">{stat.value}</div>
@@ -66,12 +66,10 @@ const AboutSection = () => {
             <div className="overflow-hidden">
               <img
                 src={aboutImage}
-                alt="Philadelphia salon interior"
+                alt="Philadelphia barbershop interior"
                 className="w-full h-[400px] lg:h-[600px] object-cover"
               />
             </div>
-
-          
           </motion.div>
 
         </div>

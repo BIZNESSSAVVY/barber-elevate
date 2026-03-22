@@ -31,7 +31,7 @@ const HeroSection = () => {
           >
             <img
               src={heroImage}
-              alt="Luxury salon in Philadelphia"
+              alt="Barbershop in Philadelphia"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent" />
@@ -46,7 +46,7 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="font-body text-xs tracking-[0.3em] uppercase text-gold mb-6 block"
             >
-              Philadelphia • Luxury Beauty Experience
+              Philadelphia • Modern Barbershop Experience
             </motion.span>
 
             <motion.h1
@@ -55,11 +55,11 @@ const HeroSection = () => {
               transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
               className="font-display text-5xl md:text-7xl lg:text-8xl font-light leading-[0.9] tracking-tight text-foreground mb-8"
             >
-              Where
+              Sharp Cuts.
               <br />
-              <span className="italic text-gold">Artistry</span>
+              <span className="italic text-gold">Clean Fades.</span>
               <br />
-              Meets Confidence
+              Real Confidence.
             </motion.h1>
 
             <motion.p
@@ -68,8 +68,8 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="font-body text-muted-foreground text-base leading-relaxed max-w-md mb-10"
             >
-              Premium hair, color, and beauty services in Philadelphia.
-              Every appointment is designed to elevate your look and your confidence.
+              At Broad Street Cuts, every detail matters. Precision fades, sharp lineups,
+              and expert grooming—done right, every time.
             </motion.p>
 
             {/* Booking Card */}
@@ -92,7 +92,7 @@ const HeroSection = () => {
                   <span className="font-body">Next Available</span>
                 </div>
                 <span className="font-display text-lg text-foreground">
-                  Today, 2:30 PM
+                  Today, 1:45 PM
                 </span>
               </div>
 
@@ -102,7 +102,7 @@ const HeroSection = () => {
                   <span className="font-body">Wait Time</span>
                 </div>
                 <span className="font-display text-lg text-foreground">
-                  ~15 min
+                  ~10 min
                 </span>
               </div>
 
@@ -110,7 +110,7 @@ const HeroSection = () => {
                 onClick={handleScrollToBooking}
                 className="group flex items-center justify-center gap-2 w-full py-3 bg-gold text-accent-foreground font-body text-xs tracking-widest uppercase hover:bg-gold-light transition-colors duration-300"
               >
-                Book Appointment
+                Book Your Cut
                 <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
               </button>
             </motion.div>
@@ -124,14 +124,14 @@ const HeroSection = () => {
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex gap-12 items-center">
               {[
-                "Hair Artistry",
-                "Color Specialists",
-                "Silk Press",
-                "Lace Front Installs",
-                "Scalp Therapy",
-                "Lash Extensions",
-                "Makeup",
-                "Bridal Styling",
+                "Skin Fades",
+                "Taper Fades",
+                "Beard Grooming",
+                "Hot Towel Shaves",
+                "Lineups",
+                "Kids Cuts",
+                "Shape Ups",
+                "Classic Cuts",
               ].map((item) => (
                 <span
                   key={item + i}
