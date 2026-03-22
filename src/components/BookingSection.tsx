@@ -78,7 +78,7 @@ const BookingSection = () => {
               {/* ✅ SETMORE IFRAME (UPDATE LATER IF NEEDED) */}
               <div className="w-full h-[500px] border border-border overflow-hidden">
                 <iframe
-                  src="https://maisonbelle.setmore.com"
+                  src="https://barberelevate.setmore.com"
                   className="w-full h-full border-0"
                   title="Booking"
                 />
